@@ -1,0 +1,44 @@
+O aplicatie pentru vanzarea de pachete turistice trebuie sa gestioneze foarte atent vanzarea, astfel incat sa nu se vanda de doua ori acelasi pachet turistic.
+
+Se dau urmatoarele:
+
+public interface IPachetTuristic {
+    void vindePachet(String codPachet);
+    void afiseazaPacheteVandute();
+}
+public abstract class APachetTuristic implements IPachetTuristic {
+    protected String agentieTurism;
+    protected String destinatie;
+    protected List<String> coduriPacheteVandute;
+    protected float pretBaza;
+
+    public APachetTuristic(String agentieTurism, String destinatie, float pretBaza) {
+        this.agentieTurism = agentieTurism;
+        this.destinatie = destinatie;
+        this.pretBaza = pretBaza;
+        this.coduriPacheteVandute = new ArrayList<>();
+    }
+}
+Cerinte
+
+Sa se implementeze clasa concreta PachetTuristic folosind Singleton simplu, astfel incat:
+
+sa existe o singura instanta
+la prima creare se seteaza:
+agentieTurism
+destinatie
+pretBaza
+metoda vindePachet(String codPachet):
+nu accepta null
+nu accepta string gol
+nu accepta duplicate
+metoda afiseazaPacheteVandute() afiseaza:
+agentia
+destinatia
+pretul de baza
+lista codurilor vandute
+In Main
+cere instanta de doua ori cu parametri diferiti
+verifica daca referintele sunt egale
+vinde pachete prin ambele referinte
+afiseaza rezultatul final

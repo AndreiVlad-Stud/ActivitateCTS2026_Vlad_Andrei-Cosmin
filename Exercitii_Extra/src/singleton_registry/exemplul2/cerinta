@@ -1,0 +1,24 @@
+Problema normala — Singleton Registry
+Enunt
+
+O aplicatie pentru administrarea unor cuptoare industriale trebuie sa se asigure ca exista un singur cuptor pentru fiecare temperatura maxima configurata.
+
+Sa se implementeze pattern-ul Singleton Registry pentru clasa Cuptor, astfel incat:
+
+pentru fiecare valoare a temperaturii maxime sa existe o singura instanta
+daca se cere din nou un cuptor cu aceeasi temperatura, sa se returneze acelasi obiect
+fiecare cuptor sa retina:
+temperaturaMaxima
+producator
+List<String> produseCoapte
+Cerinte
+metoda de acces sa fie de forma:
+getInstance(int temperaturaMaxima, String producator)
+cheia din registry va fi temperaturaMaxima
+metoda:
+coaceProdus(String numeProdus)
+afiseazaDetalii()
+nu accepti produs null sau gol
+in Main, demonstrezi:
+doua apeluri cu aceeasi temperatura dau aceeasi instanta
+apeluri cu temperaturi diferite dau instante diferite

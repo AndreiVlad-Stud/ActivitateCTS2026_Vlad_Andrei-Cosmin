@@ -1,0 +1,21 @@
+La un restaurant exista un singur RegistruRezervari care gestioneaza toate rezervarile din ziua curenta.
+
+Se da urmatoarea interfata, pe care nu ai voie sa o modifici:
+
+public interface IRegistruRezervari {
+    void adaugaRezervare(String numeClient);
+    void afiseazaRezervari();
+}
+
+Sa se implementeze un design pattern Singleton pentru clasa concreta care implementeaza aceasta interfata, astfel incat:
+
+sa existe o singura instanta a registrului
+sa se retina rezervarile intr-o lista
+sa se poata adauga si afisa rezervarile
+Cerinte:
+foloseste o List<String> pentru rezervari
+nu adauga rezervarea daca:
+numele este null
+numele este gol
+in Main, obtine instanta de doua ori si demonstreaza ca este acelasi obiect
+apelurile facute prin cele doua referinte trebuie sa lucreze pe aceeasi lista comuna

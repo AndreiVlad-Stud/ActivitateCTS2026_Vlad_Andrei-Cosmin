@@ -1,0 +1,16 @@
+La o firma de curierat exista un singur ManagerLivrari care coordoneaza toate comenzile active.
+
+Sa se implementeze un design pattern Singleton pentru clasa ManagerLivrari, astfel incat:
+
+sa existe o singura instanta in toata aplicatia
+managerul sa retina intr-o lista comenzile active
+sa poata adauga o comanda noua
+sa poata afisa toate comenzile active
+Cerinte:
+clasa sa aiba atributul:
+List<String> comenziActive
+metoda:
+adaugaComanda(String comanda)
+afiseazaComenzi()
+daca se incearca adaugarea unei comenzi null sau goale, sa se afiseze un mesaj corespunzator si sa nu se adauge
+in Main, demonstreaza ca doua variabile obtin aceeasi instanta

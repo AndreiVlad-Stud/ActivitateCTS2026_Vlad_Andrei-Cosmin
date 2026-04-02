@@ -1,0 +1,30 @@
+2. Problema cu interfata data — nu ai voie sa o modifici
+Enunt
+
+O aplicatie pentru inchirierea de biciclete electrice trebuie sa gestioneze cate o singura bicicleta pentru fiecare cod unic de statie.
+
+Se da interfata:
+
+public interface IBicicleta {
+    void inchiriaza(String numeClient);
+    void afiseazaStatus();
+}
+
+Sa se implementeze pattern-ul Singleton Registry pentru clasa concreta BicicletaElectrica, astfel incat:
+
+pentru fiecare codStatie sa existe o singura instanta
+fiecare bicicleta sa retina:
+codStatie
+model
+List<String> clientiCareAuInchiriat
+Cerinte
+metoda de acces:
+getInstance(String codStatie, String model)
+cheia din registry este codStatie
+metoda inchiriaza(String numeClient):
+nu accepta null
+nu accepta string gol
+afiseazaStatus() afiseaza toate datele
+in Main, arati:
+acelasi codStatie => aceeasi instanta
+coduri diferite => instante diferite

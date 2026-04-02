@@ -1,0 +1,43 @@
+O aplicatie pentru administrarea unor abonamente de streaming trebuie sa creeze diferite tipuri de abonamente printr-o Simple Factory.
+
+Se da interfata:
+
+public interface IAbonament {
+    void afiseazaDescriere();
+    float calculeazaPretFinal();
+}
+
+Nu ai voie sa o modifici.
+
+Trebuie sa existe urmatoarele tipuri concrete:
+
+AbonamentBasic
+AbonamentStandard
+AbonamentPremium
+Cerinte
+
+Fiecare abonament trebuie sa aiba:
+
+numeAbonat
+pretBaza
+List<String> beneficiiIncluse
+
+Fabrica trebuie sa fie de forma:
+
+public class FabricaAbonamente {
+    public static IAbonament creareAbonament(TipAbonament tip, String numeAbonat, float pretBaza) {
+        ...
+    }
+}
+Reguli
+foloseste enum TipAbonament
+calculeazaPretFinal():
+la Basic returneaza pretul de baza
+la Standard adauga o taxa fixa de 20
+la Premium adauga o taxa fixa de 50
+afiseazaDescriere() trebuie sa afiseze:
+numele abonatului
+pretul final
+lista de beneficii
+daca numeAbonat este null sau gol, trateaza cazul cum consideri mai corect
+in Main, creezi toate cele 3 tipuri doar prin fabrica

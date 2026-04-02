@@ -1,0 +1,25 @@
+O aplicatie pentru o cofetarie trebuie sa permita crearea diferitelor tipuri de prajituri, fara ca in Main sa se instantieze direct clasele concrete.
+
+Sa se implementeze pattern-ul Simple Factory pentru urmatoarele tipuri de prajituri:
+
+Tort
+Amandina
+Ecler
+Cerinte
+
+Fiecare prajitura trebuie sa aiba:
+
+denumire
+pret
+List<String> ingrediente
+
+Fiecare clasa concreta trebuie sa aiba o metoda:
+
+void afiseazaDetalii();
+
+Sa existe o fabrica FabricaPrajituri care, pe baza unui parametru, sa creeze obiectul dorit.
+
+Cerinte suplimentare
+foloseste un enum pentru tipurile de prajituri
+fiecare prajitura sa aiba macar 3 ingrediente in lista
+in Main, creezi cate un obiect din fiecare tip doar prin fabrica si le afisezi

@@ -1,0 +1,38 @@
+O aplicatie pentru un service auto trebuie sa permita crearea diferitelor tipuri de fise de interventie, fara ca in Main sa se instantieze direct clasele concrete.
+
+Trebuie sa existe urmatoarele tipuri de fise:
+
+FisaRevizie
+FisaVopsitorie
+FisaDiagnoza
+Cerinte
+
+Fiecare fisa trebuie sa aiba:
+
+numeClient
+costEstimativ
+List<String> operatiuni
+
+Fiecare produs trebuie sa aiba metoda:
+
+void afiseazaDetalii();
+
+Sa implementezi pattern-ul Factory Method:
+
+o baza pentru produs
+clase concrete pentru produse
+o baza pentru fabrica
+cate o fabrica concreta pentru fiecare tip de fisa
+Ce urmaresc aici
+
+Sa nu ai o singura fabrica cu switch, ca la Simple Factory, ci:
+
+FabricaRevizie
+FabricaVopsitorie
+FabricaDiagnoza
+
+fiecare stiind sa creeze doar produsul ei.
+
+In Main
+creezi produsele doar prin fabricile concrete
+afisezi detaliile pentru fiecare

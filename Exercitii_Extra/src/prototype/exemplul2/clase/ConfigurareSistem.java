@@ -6,7 +6,7 @@ import java.util.List;
 public class ConfigurareSistem implements ConfigurarePrototype{
     private String numeSistem;
     private String versiuneSistemOperare;
-    private List<String> listaAplicatiiInstalate = new ArrayList<>();
+    private List<String> listaAplicatiiInstalate;
 
     public ConfigurareSistem(String numeSistem, String versiuneSistemOperare, List<String> listaAplicatiiInstalate) {
         this.numeSistem = numeSistem;

@@ -1,0 +1,40 @@
+O aplicatie pentru configurarea unor laptopuri personalizate trebuie sa permita construirea pas cu pas a unui obiect complex, fara constructor foarte mare.
+
+Sa se implementeze pattern-ul Builder pentru clasa Laptop.
+
+Cerinte
+
+Fiecare laptop are:
+
+campuri obligatorii
+procesor
+memorieRAM
+campuri optionale
+capacitateSSD
+placaVideoDedicata
+sistemOperare
+List<String> aplicatiiPreinstalate
+Reguli
+obiectul final se creeaza doar prin Builder
+constructorul clasei Laptop trebuie sa fie private
+daca procesor este null sau gol, arunci exceptie
+daca memorieRAM <= 0, arunci exceptie
+daca capacitateSSD < 0, arunci exceptie
+lista de aplicatii sa fie copiata, nu tinuta direct prin referinta
+Metode
+
+Clasa finala sa aiba:
+
+void afiseazaDetalii();
+
+Builder-ul sa aiba metode chain de tipul:
+
+setCapacitateSSD(...)
+setPlacaVideoDedicata(...)
+setSistemOperare(...)
+adaugaAplicatie(...)
+build()
+In Main
+creezi un laptop simplu, doar cu obligatorii
+creezi un laptop mai complex, cu mai multe optiuni si aplicatii
+afisezi ambele obiecte
